@@ -22,11 +22,16 @@ export async function POST(req, res) {
     html: `<div>${message}</div><p>Sent from:
     ${email}</p>`
   }
-  transporter.sendMail(mailData, function (err, info) {
-    if(err)
-      console.log(err)
-    else
-      console.log(info)
-  })
+
+  await new Promise((resolve, reject) => {
+    transporter.sendMail(mailData, function (err, info) {
+      if(err)
+        console.log(err)
+      else
+        console.log(info)
+    })
+  });
+
+  
   return NextResponse.json({message: "Mail Sent"}, {status: 200});
 }
