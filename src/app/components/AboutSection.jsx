@@ -25,8 +25,8 @@ const TAB_DATA = [
         content: (
             <ul className='list-disc pl-2 pb-2'>
                 <li>BA in English from Indira Ganndhi National Open University</li>
-                <li>10+2 from St. Josheph's Girls Inter College</li>
-                <li>10 from St. Francis' Convent School</li>
+                <li>10+2 from St. Josheph&#39;s Girls Inter College</li>
+                <li>10 from St. Francis&#39; Convent School</li>
             </ul>
         )
     },

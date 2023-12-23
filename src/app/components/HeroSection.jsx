@@ -10,7 +10,7 @@ const HeroSection = () => {
             {/* LEFT SIDE */}
             <div className='col-span-7 place-self-center text-center sm:text-left'>
                 <h1 className='mb-4 lg:text-6xl sm:text-5xl text-4xl font-bold'>
-                    <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>Hello, I'm{" "}</span> 
+                    <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>Hello, I&#39;m{" "}</span> 
                     <br />
                     <TypeAnimation
                         sequence={[

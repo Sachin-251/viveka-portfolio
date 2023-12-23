@@ -43,8 +43,8 @@ const EmailSection = () => {
     <section>
         <div className='grid md:grid-cols-2 mb-12 md:my-12 py-24 gap-8'>
             <div>
-                <h5 className='text-xl font-bold my-2'>Let's Connect</h5>
-                <p className='text-[#ADB7BE] mb-4 max-w-md text-justify'>Looking for opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                <h5 className='text-xl font-bold my-2'>Let&#39;s Connect</h5>
+                <p className='text-[#ADB7BE] mb-4 max-w-md text-justify'>Looking for opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&#39;ll try my best to get back to you!</p>
                 <div className='socials flex flex-row items-center gap-2'>
                     <Link href={'https://www.linkedin.com/in/viveka-massey-136520202/'} target='_blank' >
                         <Image src={LinkedInIcon} alt="linkedin-icon" />
