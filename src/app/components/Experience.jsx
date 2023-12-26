@@ -1,5 +1,7 @@
+"use client";
 import React from 'react'
-import ExperienceCard from './ExperienceCard'
+import ExperienceCard from './ExperienceCard';
+import { motion } from 'framer-motion';
 
 const experienceData = [
     {
@@ -30,15 +32,18 @@ const experienceData = [
 
 const Experience = () => {
   return (
-    <section className='mt-16'>
-        <h2 className='text-4xl font-bold mb-8 text-center'>My Experience</h2>
-        <div className='md:grid md:grid-cols-3 gap-8'>
-            {
-                experienceData.map((exp) => (
-                    <ExperienceCard key={exp.id} title={exp.title} duration={exp.duration} description={exp.description} imgUrl={exp.image} webUrl={exp.Url} />
-                ))
-            }
-        </div>
+    <section className='mt-16' id='experience'>
+        <motion.div initial="hidden" whileInView="visible" viewport={{once:true, amount:0.5}} transition={{delay:0.2,duration:0.5}} variants={{hidden:{opacity: 0, y: 50}, visible:{opacity: 1, y: 0}}}>
+            <h2 className='text-4xl font-bold mb-8 text-center'>My Experience</h2>
+            <div className='md:grid md:grid-cols-3 gap-8'>
+                {
+                    experienceData.map((exp) => (
+                        <ExperienceCard key={exp.id} title={exp.title} duration={exp.duration} description={exp.description} imgUrl={exp.image} webUrl={exp.Url} />
+                    ))
+                }
+            </div>
+        </motion.div>
+        
     </section>
   )
 }

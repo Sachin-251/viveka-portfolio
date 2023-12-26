@@ -27,11 +27,14 @@ export async function POST(req, res) {
     transporter.sendMail(mailData, function (err, info) {
       if(err)
         console.log(err)
-      else
-        console.log(info)
+      else{
+        console.log(info);
+        resolve(true);
+      }
+        
     })
   });
 
-  
   return NextResponse.json({message: "Mail Sent"}, {status: 200});
+  
 }

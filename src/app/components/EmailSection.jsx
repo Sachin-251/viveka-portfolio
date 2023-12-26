@@ -4,6 +4,7 @@ import LinkedInIcon from '../../../public/linkedin-icon.svg';
 import XIcon from '../../../public/x-icon.svg';
 import Image from "next/image";
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const EmailSection = () => {
 
@@ -40,9 +41,9 @@ const EmailSection = () => {
     };
 
   return (
-    <section>
+    <section id='contact'>
         <div className='grid md:grid-cols-2 mb-12 md:my-12 py-24 gap-8'>
-            <div>
+            <motion.div initial="hidden" whileInView="visible" viewport={{once:true, amount:0.5}} transition={{delay:0.2,duration:0.5}} variants={{hidden:{opacity: 0, x: -50}, visible:{opacity: 1, x: 0}}}>
                 <h5 className='text-xl font-bold my-2'>Let&#39;s Connect</h5>
                 <p className='text-[#ADB7BE] mb-4 max-w-md text-justify'>Looking for opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&#39;ll try my best to get back to you!</p>
                 <div className='socials flex flex-row items-center gap-2'>
@@ -53,9 +54,9 @@ const EmailSection = () => {
                         <Image src={XIcon} alt="x-icon" />
                     </Link>
                 </div>
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div initial="hidden" whileInView="visible" viewport={{once:true, amount:0.5}} transition={{delay:0.2,duration:0.5}} variants={{hidden:{opacity: 0, x: 50}, visible:{opacity: 1, x: 0}}}>
                 <form className='flex flex-col gap-6' id="contact-form" onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="name" className='block mb-2 text-sm font-medium'>Name</label>
@@ -75,7 +76,7 @@ const EmailSection = () => {
                     <button type='submit' className='bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2.5 px-5 rounded-lg with-full text-center'>Send Message</button>
                     
                 </form>
-            </div>
+            </motion.div>
         </div>
     </section>
   )
