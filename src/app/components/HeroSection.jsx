@@ -18,7 +18,7 @@ const HeroSection = ({reference}) => {
     }
 
   return (
-    <section>
+    <section id="landing">
         <div className='grid grid-cols-1 sm:grid-cols-12 gap-6'>
             {/* LEFT SIDE */}
             <motion.div initial="hidden" whileInView="visible" viewport={{once:true, amount:0.5}} transition={{delay:0.2,duration:0.5}} variants={{hidden:{opacity: 0, x: -50}, visible:{opacity: 1, x: 0}}} className='col-span-7 place-self-center text-center sm:text-left'>
