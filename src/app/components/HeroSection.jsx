@@ -4,8 +4,11 @@ import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import FileSaver from 'file-saver';
+import { useRouter } from 'next/navigation';
 
 const HeroSection = ({reference}) => {
+
+    const router = useRouter();
 
     const downloadCV = (e) => {
         e.preventDefault();
@@ -46,6 +49,7 @@ const HeroSection = ({reference}) => {
                 </p>
                 <div>
                     <button onClick={moveToContact} className='w-full sm:w-fit px-6 py-3 rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:opacity-80 text-white font-bold transition duration-500'>Hire Me</button>
+                    <button onClick={() => router.push('https://the-journal-blog.vercel.app/author?name=Viveka%20Massey&postId=clrumsh4k0001260wgo6wxrq5')} className='w-full sm:w-fit px-6 py-3 rounded-full mr-4 bg-gradient-to-tl from-blue-500 via-purple-500 to-pink-500 hover:opacity-80 text-white font-bold transition duration-500 mt-3'>Sample Work</button>
                     <button onClick={downloadCV} className='w-full sm:w-fit px-1 py-1 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white font-bold mt-3'>
                         <span className='block bg-[#121212] hover:bg-slate-800 transition duration-500 rounded-full px-5 py-2'>Download CV</span>
                     </button>
