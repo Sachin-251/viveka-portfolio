@@ -12,7 +12,7 @@ const HeroSection = ({reference}) => {
 
     const downloadCV = (e) => {
         e.preventDefault();
-        FileSaver.saveAs("./files/Resume-Viveka.pdf", "Resume-Viveka.pdf");
+        FileSaver.saveAs("./files/Resume_Viveka.pdf", "Resume-Viveka.pdf");
     }
 
     const moveToContact = () => {
