@@ -36,7 +36,8 @@ const TAB_DATA = [
         id: "certificates",
         content: (
             <ul className='list-disc pl-2 pb-2'>
-                {/* <li></li> */}
+                <li>Google Authorized Certification in Foundations of Digital Marketing and E-commerce.</li>
+                <li>Google Authorized Certification in Attract and Engage Customers with Digital Marketing.</li>
             </ul>
         )
     }
